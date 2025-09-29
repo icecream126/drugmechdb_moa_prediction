@@ -1,6 +1,19 @@
 # DrugMechCounterfactuals: The Drug Mechanisms Counterfactuals Dataset
 
-Replace the above line with the name of this project, and replace this sentence with a description of this repository as well as its contents, ownership, and purpose.
+This is a release of the Drug Mechanisms Counterfactuals Dataset, developed for evaluating Large Language Models on their ability to recall and reason about drug mechanisms.
+
+The dataset is described in our accompanying paper ...
+
+
+## Setup
+
+... TBD ...
+
+
+## How to cite
+
+... TBD ...
+
 
 ## Code of Conduct
 

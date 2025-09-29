@@ -1,0 +1,291 @@
+---------------------------------------------------------------------
+$> python -m drugmechcf.analyze.cfstats stats
+
+
+nbr Data files found = 12
+
+
+[1] File: ../Data/MoaData/AddLink_neg_dpi_r1k.json
+    query_type = ADD_LINK
+    is_surface_level = True
+    is_negative_sample = True
+    n_samples = 1,000
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |       2 |          2 |       0.2% |      0.2% |
+|  1 | Drug              |     998 |      1,000 |      99.8% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+----------------
+
+[2] File: ../Data/MoaData/AddLink_neg_ppi_r1k.json
+    query_type = ADD_LINK
+    is_surface_level = False
+    is_negative_sample = True
+    n_samples = 1,000
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+----------------
+
+[3] File: ../Data/MoaData/AddLink_pos_dpi_r1k.json
+    query_type = ADD_LINK
+    is_surface_level = True
+    is_negative_sample = False
+    n_samples = 1,000
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |       2 |          2 |       0.2% |      0.2% |
+|  1 | Drug              |     998 |      1,000 |      99.8% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+----------------
+
+[4] File: ../Data/MoaData/AddLink_pos_ppi_r1k.json
+    query_type = ADD_LINK
+    is_surface_level = False
+    is_negative_sample = False
+    n_samples = 1,000
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |   1,000 |      1,000 |     100.0% |    100.0% |
+
+----------------
+
+[5] File: ../Data/MoaData/change_neg_dpi_r250.json
+    query_type = CHANGE_LINK
+    is_surface_level = True
+    is_negative_sample = True
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Drug         |     250 |        250 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |     250 |        250 |     100.0% |    100.0% |
+
+----------------
+
+[6] File: ../Data/MoaData/change_neg_ppi_r250.json
+    query_type = CHANGE_LINK
+    is_surface_level = False
+    is_negative_sample = True
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      34 |         34 |      13.6% |     13.6% |
+|  1 | GeneFamily        |      42 |         76 |      16.8% |     30.4% |
+|  2 | Protein           |     174 |        250 |      69.6% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |     250 |        250 |     100.0% |    100.0% |
+
+----------------
+
+[7] File: ../Data/MoaData/change_pos_dpi_r250.json
+    query_type = CHANGE_LINK
+    is_surface_level = True
+    is_negative_sample = False
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Drug         |     250 |        250 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      22 |         22 |       8.8% |      8.8% |
+|  1 | GeneFamily        |      68 |         90 |      27.2% |     36.0% |
+|  2 | Protein           |     160 |        250 |      64.0% |    100.0% |
+
+----------------
+
+[8] File: ../Data/MoaData/change_pos_ppi_r250.json
+    query_type = CHANGE_LINK
+    is_surface_level = False
+    is_negative_sample = False
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      36 |         36 |      14.4% |     14.4% |
+|  1 | GeneFamily        |      47 |         83 |      18.8% |     33.2% |
+|  2 | Protein           |     167 |        250 |      66.8% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      53 |         53 |      21.2% |     21.2% |
+|  1 | GeneFamily        |      93 |        146 |      37.2% |     58.4% |
+|  2 | Protein           |     104 |        250 |      41.6% |    100.0% |
+
+----------------
+
+[9] File: ../Data/MoaData/delete_neg_dpi_r250.json
+    query_type = DELETE_LINK
+    is_surface_level = True
+    is_negative_sample = True
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Drug         |     250 |        250 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |     250 |        250 |     100.0% |    100.0% |
+
+----------------
+
+[10] File: ../Data/MoaData/delete_neg_ppi_r250.json
+    query_type = DELETE_LINK
+    is_surface_level = False
+    is_negative_sample = True
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      34 |         34 |      13.6% |     13.6% |
+|  1 | GeneFamily        |      42 |         76 |      16.8% |     30.4% |
+|  2 | Protein           |     174 |        250 |      69.6% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Protein      |     250 |        250 |     100.0% |    100.0% |
+
+----------------
+
+[11] File: ../Data/MoaData/delete_pos_dpi_r250.json
+    query_type = DELETE_LINK
+    is_surface_level = True
+    is_negative_sample = False
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType   |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:-------------|--------:|-----------:|-----------:|----------:|
+|  0 | Drug         |     250 |        250 |     100.0% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      22 |         22 |       8.8% |      8.8% |
+|  1 | GeneFamily        |      68 |         90 |      27.2% |     36.0% |
+|  2 | Protein           |     160 |        250 |      64.0% |    100.0% |
+
+----------------
+
+[12] File: ../Data/MoaData/delete_pos_ppi_r250.json
+    query_type = DELETE_LINK
+    is_surface_level = False
+    is_negative_sample = False
+    n_samples = 250
+
+
+Source Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      36 |         36 |      14.4% |     14.4% |
+|  1 | GeneFamily        |      47 |         83 |      18.8% |     33.2% |
+|  2 | Protein           |     167 |        250 |      66.8% |    100.0% |
+
+Target Node type counts:
+
+|    | EntityType        |   count |   cumTotal |   pctTotal |   cum_pct |
+|---:|:------------------|--------:|-----------:|-----------:|----------:|
+|  0 | ChemicalSubstance |      53 |         53 |      21.2% |     21.2% |
+|  1 | GeneFamily        |      93 |        146 |      37.2% |     58.4% |
+|  2 | Protein           |     104 |        250 |      41.6% |    100.0% |
+
+----------------
+
+Dataset Summary:
+
+| Query Type   | is Surface Level?   |   Positives |   Negatives |
+|:-------------|:--------------------|------------:|------------:|
+| ADD_LINK     | False               |       1,000 |       1,000 |
+| ADD_LINK     | True                |       1,000 |       1,000 |
+| CHANGE_LINK  | False               |         250 |         250 |
+| CHANGE_LINK  | True                |         250 |         250 |
+| DELETE_LINK  | False               |         250 |         250 |
+| DELETE_LINK  | True                |         250 |         250 |
+
+
+Total Run time = 0:00:00.025762
+

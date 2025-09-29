@@ -1,0 +1,19 @@
+.idea/
+.DS_Store
+__pycache__/
+
+# Ignore all ...
+# ... log files
+*.log
+# ... gzipped files
+*.gz
+# ... gzipped files
+*.gz
+# ... Pickle files
+*.pkl
+
+# Ignore contents of 'Data'
+/Data/*
+# ... except ...
+!/Data/README*
+!/Data/Counterfactuals
