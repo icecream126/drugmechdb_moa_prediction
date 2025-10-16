@@ -7,8 +7,6 @@ __pycache__/
 *.log
 # ... gzipped files
 *.gz
-# ... gzipped files
-*.gz
 # ... Pickle files
 *.pkl
 
