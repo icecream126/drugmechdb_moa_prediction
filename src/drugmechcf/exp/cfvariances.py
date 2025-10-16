@@ -811,10 +811,12 @@ def stratified_bootstrapped_stats(session_files: list[str],
 def read_all_session_files(bdir = "../Data/Sessions/Models") -> pd.DataFrame:
     """
     Compile a df with annotated session files.
+
     :param bdir: Parent dir, under which there is a subdir for each model, and within that dir are the
         JSON session files for each query type. The name of the session file is the same as that of the
         input samples file (from ".../Data/Counterfactuals/"), except it ends in "-k.json" if the query
         mode was "Closed World" (see `get_is_closed_world()` below).
+
     :return: the dataframe
     """
 

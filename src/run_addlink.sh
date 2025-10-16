@@ -2,6 +2,10 @@
 #
 #  Run all the Add-Link queries against the 4 ChatGPT models
 #
+#  See `MODELS` below for list of models invoked by this script.
+#  Output file names follow the convention expected by `drugmechcf.exp.cfvariances.read_all_session_files()`,
+#  the root name is based on the query-data file, with an optional "-k" suffix indicating closed-world run.
+#
 #  To run:
 #	$ source $PROJDIR/.venv/bin/activate
 #	(dmcf) $ cd $PROJDIR/src
