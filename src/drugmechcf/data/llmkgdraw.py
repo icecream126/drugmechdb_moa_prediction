@@ -6,7 +6,6 @@ import itertools
 from typing import Union
 
 import networkx as nx
-# import matplotlib.pyplot as plt
 
 from drugmechcf.data.llmkg import LLMKG, load_llmkg
 
