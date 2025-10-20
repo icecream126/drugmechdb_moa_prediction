@@ -2,7 +2,7 @@
 Misc text utils, can be used for normalizing names, before calling CharNodeMatcher
 """
 
-from unidecode import unidecode
+from anyascii import anyascii
 import unicodedata
 
 
@@ -114,8 +114,8 @@ def standardize_chars_basic(text: str) -> str:
 def standardize_chars_unidecode(text):
     # This seems to be a superset of `standardize_chars_basic`, and may be too aggressive for some use-cases.
     # E.g. this will convert 'μ-meter' to 'm-meter'
-    # Strip(), as Standardization may add SPACE, e.g. standardize_chars_unidecode('北亰') = 'Bei Jing '
-    text = unidecode(text).strip()
+    # Strip(), in case Standardization adda SPACE
+    text = anyascii(text).strip()
     return text
 
 

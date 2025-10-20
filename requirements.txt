@@ -11,7 +11,7 @@ scipy~=1.13.1
 
 openai~=1.65
 
-Unidecode~=1.2.0
+anyascii~=0.3.3
 
 regex~=2022.7.9
 tenacity~=8.2.2
