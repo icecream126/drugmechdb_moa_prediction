@@ -15,7 +15,7 @@ The counterfactual queries, and the related factual queries, are available as JS
 
 The counterfactual queries are derived from [DrugMechDB](https://github.com/SuLab/DrugMechDB); using the Add-Link queries, and any Closed World queries (where the prompt includes information about relevant drug mechanisms), requires downloading DrugMechDB. See [this README file](Data/README.txt).
 
-[DrugMechDB](https://github.com/SuLab/DrugMechDB) is also required for the factual queries used in the accompanying paper. The code also allows you to create your own factual queries, for which both [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) and [MONDO](https://mondo.monarchinitiative.org) are also required. See [this README file](Data/README.txt) for the needed files.
+[DrugMechDB](https://github.com/SuLab/DrugMechDB) is also required for the factual queries described in the accompanying paper. The code also allows you to create your own factual queries, for which both [PrimeKG](https://zitniklab.hms.harvard.edu/projects/PrimeKG/) and [MONDO](https://mondo.monarchinitiative.org) are required. See [this README file](Data/README.txt) for the needed files.
 
 
 ### Setup for the Code
@@ -55,6 +55,7 @@ Please consult the following documents for a more detailed description of the Da
 * [The dataset](Docs/The-Dataset.md)
 * [The Evaluation Framework](Docs/Evaluation-Framework.md)
 * [How to test new models on the dataset](Docs/Testing-New-LLMs.md)
+* [Evaluation of some LLMs on the dataset](Docs/Experiments.md)
 
 
 ## How to cite
