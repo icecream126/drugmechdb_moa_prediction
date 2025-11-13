@@ -2,7 +2,7 @@
 
 This is a release of the Drug Mechanisms Counterfactuals Dataset, developed for evaluating Large Language Models on their ability to recall and reason about drug mechanisms.
 
-The dataset is described in our accompanying paper published in FLLM 2025, and also available as a [preprint](...).
+The dataset is described in our accompanying paper published in FLLM 2025 (see below), and also available as a [preprint](http://arxiv.org/abs/2511.06418).
 
 The dataset and related code is available for use under the [MIT license](LICENSE).
 
@@ -61,14 +61,24 @@ Please consult the following documents for a more detailed description of the Da
 ## How to cite
 
 ```
-@inproceedings{DrugMechCounterfactuals,
-  author = {Sunil Mohan and Theofanis Karaletsos},
+@inproceedings{DrugMechCounterfactuals:FLLM,
   title = {How Well Does {ChatGPT} Understand Drug Mechanisms? A Knowledge + Reasoning Evaluation Dataset},
+  author = {Sunil Mohan and Theofanis Karaletsos},
   booktitle = {2025 3rd International Conference on Foundation and Large Language Models (FLLM)},
   year = {2025},
   pages = {},
   doi = {},
   publisher = {IEEE},
+}
+
+@misc{DrugMechCounterfactuals:arXiv,
+      title={How Well Do LLMs Understand Drug Mechanisms? A Knowledge + Reasoning Evaluation Dataset}, 
+      author={Sunil Mohan and Theofanis Karaletsos},
+      year={2025},
+      eprint={2511.06418},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.06418}, 
 }
 ```
 
