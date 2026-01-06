@@ -21,7 +21,7 @@ from tenacity import (
     wait_random,
 )  # for exponential backoff
 
-from openai import OpenAI, RateLimitError, BadRequestError
+from openai import OpenAI, RateLimitError, BadRequestError, APIConnectionError
 from openai.types.chat.chat_completion import ChatCompletion
 
 from drugmechcf.utils.misc import ValidatedDataclass
@@ -328,13 +328,13 @@ class OpenAICompletionClient:
 
         return CompletionOutput.from_openai_client(self.last_response)
 
-    @retry(retry=retry_if_exception_type(RateLimitError),
+    @retry(retry=retry_if_exception_type((RateLimitError, APIConnectionError)),
            # after=after_log(logger, logging.DEBUG),
            wait=wait_random_exponential(min=5, max=90) + wait_random(0, 10),
            stop=stop_after_attempt(6))
     def _call_chat_completion_with_backoff(self, messages):
         """
-        IF RateLimitError is raised THEN
+        IF RateLimitError or APIConnectionError is raised THEN
             This will keep retrying up to 6 times.
             IF it still does not succeed, then the exception can be accessed as follows:
 

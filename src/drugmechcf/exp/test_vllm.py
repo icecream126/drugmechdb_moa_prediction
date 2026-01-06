@@ -25,7 +25,8 @@ def test_qwen(samples_data_file: str,
               model: str = None,
               insert_known_moas: bool = False,
               max_samples: int = 0,
-              show_response=False):
+              show_response=False,
+              n_worker_threads: int = 1):
     """
     Run queries from `samples_data_file` against a Qwen model hosted by vllm.
 
@@ -35,6 +36,7 @@ def test_qwen(samples_data_file: str,
     :param insert_known_moas: Whether to construct a Closed-world prompt
     :param max_samples: Max nbr query samples to run. Default is all.
     :param show_response: Whether to show LLM response in output.
+    :param n_worker_threads: Number of worker threads for parallel processing. Default is 1.
     """
 
     if model is None:
@@ -45,7 +47,6 @@ def test_qwen(samples_data_file: str,
 
     # adjust for your environment
     timeout_secs = 600
-    n_worker_threads = 1
 
     samples_filenm = os.path.basename(samples_data_file)
 
@@ -116,6 +117,8 @@ if __name__ == "__main__":
                                  help="Insert Known MoAs in the prompt (Closed-world setting).")
     _sub_cmd_parser.add_argument('-n', '--nbr_samples', type=int, default=None,
                                  help="Number of samples to run. Default is all.")
+    _sub_cmd_parser.add_argument('-w', '--n_worker_threads', type=int, default=1,
+                                 help="Number of worker threads for parallel processing. Default is 1.")
     # args
     _sub_cmd_parser.add_argument('samples_data_file', type=str,
                                  help="Samples data file.")
@@ -142,7 +145,8 @@ if __name__ == "__main__":
                   _args.output_json_file,
                   model=_args.model,
                   insert_known_moas=_args.insert_known_moas,
-                  max_samples=_args.nbr_samples
+                  max_samples=_args.nbr_samples,
+                  n_worker_threads=_args.n_worker_threads
                   )
 
     elif _args.subcmd == 'test':
