@@ -1,3 +1,13 @@
+# Settings
+```
+cd Data
+git clone https://github.com/SuLab/DrugMechDB.git
+
+cd DrugMechDB
+아래 링크에 있는 deprecated_idx.txt를 복붙해서 DrugMechDB/ 폴더 바로 아래에다가 생성
+https://github.com/SuLab/DrugMechDB/blob/41fea1332cdc56abab1c12761edd2e63a01ef9ca/utils/deprecated_ids.txt#L4
+```
+
 # DrugMechCounterfactuals: The Drug Mechanisms Counterfactuals Dataset
 
 This is a release of the Drug Mechanisms Counterfactuals Dataset, developed for evaluating Large Language Models on their ability to recall and reason about drug mechanisms.
