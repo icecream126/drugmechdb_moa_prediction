@@ -51,11 +51,6 @@ MODELS=("Qwen3-4B-Thinking-2507-FP8")
 # ... Open-world and Closed-world
 OPTIONS=("" "-k")
 
-# ... Number of worker threads for parallel processing
-# Increase this to process more samples in parallel (e.g., 4, 8, 16)
-# Note: Too many threads may overwhelm the vLLM server
-N_WORKER_THREADS=1
-
 
 # -- Nested loop
 
@@ -84,7 +79,7 @@ for model in "${MODELS[@]}"; do
             jsonf="${DEST}/${outroot}.json"
             logf="${DEST}/${outroot}_log.txt"
 
-            cmd_opts="-m ${model} ${opt} -w ${N_WORKER_THREADS}"
+            cmd_opts="-m ${model} ${opt}"
 
             echo "----------------------------------------"
             echo "opts = ${cmd_opts}"

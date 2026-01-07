@@ -2,6 +2,7 @@
 Test Qwen models with VLLM-hosted LLM
 """
 
+import os
 import os.path
 
 from drugmechcf.llmx.test_addlink import test_addlink_batch
@@ -48,6 +49,10 @@ def test_qwen(samples_data_file: str,
     # adjust for your environment
     timeout_secs = 600
 
+    # Get vLLM port from environment variable, default to 8000
+    vllm_port = os.environ.get("VLLM_PORT", "8000")
+    base_url = f"http://localhost:{vllm_port}/v1"
+
     samples_filenm = os.path.basename(samples_data_file)
 
     if samples_filenm.startswith("AddLink"):
@@ -56,7 +61,7 @@ def test_qwen(samples_data_file: str,
                            output_json_file,
                            model_key=model,
                            api_key="EMPTY",
-                           base_url="http://localhost:8000/v1",
+                           base_url=base_url,
                            insert_known_moas=insert_known_moas,
                            n_worker_threads=n_worker_threads,
                            timeout_secs=timeout_secs,
@@ -72,7 +77,7 @@ def test_qwen(samples_data_file: str,
         test_editlink_batch(samples_data_file, output_json_file,
                             model_key=model,
                             api_key="EMPTY",
-                            base_url="http://localhost:8000/v1",
+                            base_url=base_url,
                             prompt_version=prompt_version,
                             insert_known_moas=insert_known_moas,
                             n_worker_threads=n_worker_threads,
