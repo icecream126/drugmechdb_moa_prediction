@@ -7,7 +7,7 @@ vllm serve Qwen/Qwen3-4B-Thinking-2507-FP8 --max-model-len 200000 --reasoning-pa
 # run_qwen_all.sh를 위해서 각 GPU마다 vllm server 실행
 # GPU 0에서 vLLM 서버 실행 (포트 8001)
 CUDA_VISIBLE_DEVICES=0 vllm serve Qwen/Qwen3-4B-Thinking-2507-FP8 \
-    --port 8001 \
+    --port 8000 \
     --max-model-len 200000 \
     --reasoning-parser deepseek_r1
 
@@ -26,9 +26,18 @@ CUDA_VISIBLE_DEVICES=2 vllm serve Qwen/Qwen3-4B-Thinking-2507-FP8 \
 
 # GPU 3에서 vLLM 서버 실행 (포트 8001)
 CUDA_VISIBLE_DEVICES=3 vllm serve Qwen/Qwen3-4B-Thinking-2507-FP8 \
-    --port 8008 \
+    --port 8003 \
     --max-model-len 100000 \
     --reasoning-parser deepseek_r1
+```
+
+# Llama3 8B serving
+```
+CUDA_VISIBLE_DEVICES=1 vllm serve meta-llama/Meta-Llama-3-8B-Instruct \
+    --port 8001 \
+    --max-model-len 8192 \
+    --dtype bfloat16 \
+    --enforce-eager
 ```
 
 # 일단 무조건 src로 이동하고 시작
@@ -52,4 +61,4 @@ python -m drugmechcf.exp.test_vllm batch -m Qwen3-4B-Thinking-2507-FP8 -n 3 ../D
 # toy example
 ```
 python toy_multiagent.py debate "5 + 3 * 2 = ?"
-```
+```q
